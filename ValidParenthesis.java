@@ -23,4 +23,9 @@ public class ValidParenthesis {
         }
         return st.isEmpty();
     }
+
+    public static void main(String[] args) {
+      String s = "ddd";
+
+    }
 }
