@@ -26,6 +26,8 @@ public class ValidParenthesis {
 
     public static void main(String[] args) {
       String s = "ddd";
+      String prefix = "flow";
+        System.out.println("flower".substring(0,prefix.length()-1));
 
     }
 }
