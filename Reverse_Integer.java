@@ -1,25 +1,34 @@
 package Leetcode_Problems;
 
-public class Reverse_Integer {
+// class Solution {
+//     public String longestCommonPrefix(String[] strs) {
+//         String result = "";
+//         Arrays.sort(strs);
 
-        public int reverse(int n) {
+//         char[] first = strs[0].toCharArray();
+//         char[] last = strs[strs.length - 1].toCharArray();
+//         int c = 0;
+//         while(c < first.length){
 
-            long temp = 0;
+//             if(first[c] == last[c]){
+//                 result += first[c];
+//                 c++;
+//             }else{
+//                 break;
+//             }
+//         }
+//         return c == 0 ? "" : result;
+//     }
+// }
+class Reverse_Integer {
+    public String longestCommonPrefix(String[] strs) {
+        String start = strs[0];
 
-            while(n != 0 ){
-
-
-
-                int rem = n % 10;
-                temp = temp * 10 + rem;
-                n /= 10;
-
-
-                if (temp > Integer.MAX_VALUE || temp < Integer.MIN_VALUE) {
-                    return 0;
-                }
+        for(int i = 1;i < strs.length;i++){
+            while(strs[i].indexOf(start) != 0){
+                start = start.substring(0,start.length() - 1);
             }
-            return (int) temp;
         }
+        return start;
     }
-
+}
