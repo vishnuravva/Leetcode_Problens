@@ -31,4 +31,10 @@ class Reverse_Integer {
         }
         return start;
     }
+
+    public static void main(String[] args) {
+        String s = " ";
+        s.trim();
+        System.out.println(s.length());
+    }
 }
